@@ -1,0 +1,44 @@
+﻿@using EntityLayer
+@model List<Hastane>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<div class="container">
+    <div class="p-5 w-50 mx-3">
+
+        <a href="/Hospital/Add" class="btn btn-primary">Add Hospital</a>
+        <a href="/Hospital/Delete" class="btn btn-primary">Delete Hospital</a>
+        <a href="/Hospital/Update" class="btn btn-primary">Update Hospital</a>
+
+    </div>
+    <br />
+
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Hospital Name</th>
+                <th>Hospital City</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+
+        {
+            <tbody>
+                <tr>
+                    <td>@item.hastane_id</td>
+                    <td>@item.hastane_ad</td>
+                    <td>@item.hastane_sehir</td>
+                </tr>
+            </tbody>
+
+        }
+
+
+
+    </table>
+
+
+
+</div>
